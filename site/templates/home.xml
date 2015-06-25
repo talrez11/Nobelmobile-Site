@@ -9,7 +9,27 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<header>
+				<div id="top">
+					<a href="#" class="logo"></a>
+					<a href="#"><cms:text constant="link_site"/></a>
+				</div>
+				<div class="content">
+					<div class="controls">
+						<a href="javascript:void(0)"><cms:text constant="local"/></a>
+						<a href="javascript:void(0)"><cms:text constant="Long"/></a>
+						<a href="javascript:void(0)"><cms:text constant="Int"/></a>
+					</div>
+				</div>
+			</header>
+			<a
+				href="'tel:'.urlencode(Language::getText('number'))"
+				cms:eval="href"
+				class="phone"
+				>
+				<cms:text constant="number_text"/>
+			</a>
+			<a href="javascript:void(0)" class="callback"><cms:text constant="callback"/></a>
 		</body>
 	</html>
 </document>
