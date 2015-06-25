@@ -1,3 +1,10 @@
 {
-    "site_title": "Site title"
+    "site_title": "NobelVanLines-Mobile",
+    "link_site":"Go to site",
+    "local":"Local",
+    "Long":"Long Distance",
+    "Int":"Int' Move",
+    "number":"09-7654321",
+    "number_text":"Call us",
+    "callback":"Get a callback"
 }
