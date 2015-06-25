@@ -1,0 +1,135 @@
+/**
+ * Mobile Style Sheet
+ * NobelVanLines-Mobile
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+header {
+	display: block;
+	background-image: url(../images/home-background-04.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+	min-height: 352px;
+}
+
+div#top {
+	display: block;
+	margin-top: 25px;
+	text-align: center;
+	position: relative;
+}
+
+div#top a:last-of-type {
+	display: inline-block;
+	position: absolute;
+	top: 8px;
+	left:5px;
+	font-size: 0.8em;
+	color:black;
+}
+
+a.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../images/logo.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 170px 48px;
+	width: 170px;
+	height: 48px;
+}
+
+/*controls*/
+
+div.content {
+	display: block;
+	position: relative;
+}
+
+div.controls {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top:50px;
+}
+
+div.controls a {
+	display: block;
+	text-align: left;
+	margin-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 35px;
+	padding-right: 10px;
+	text-decoration: none;
+	background-color: #34495e;
+	font-size: 0.8em;
+	color: white;
+	position: relative;
+}
+
+div.controls a:before {
+	content:"";
+	position: absolute;
+	top:50%;
+	margin-top: -15px;
+	left:15px;
+	margin-left: -15px;
+	background-image: url(../images/icons-sprite.svg);
+	background-repeat: no-repeat;
+	background-position:0px -120px;
+	background-size: 30px 360px;
+	width: 30px;
+	height: 30px;
+}
+
+div.controls a:nth-of-type(2):before {
+	background-position:0px -180px;
+}
+
+div.controls a:nth-of-type(3):before {
+	background-position:0px -240px;
+}
+
+div.controls a:after {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 100%;
+	width: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #34495e;
+	border-radius: 0% 100% 100% 0%;
+}
+a.phone {
+	display: block;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #16a61e;
+	background-image: url(../images/icons-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: right 5px;
+	background-size: 50px 600px;
+	text-decoration: none;
+	color: white;
+}
+
+a.callback {
+	display: block;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color:#34495e;
+	background-image: url(../images/icons-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: right -45px;
+	background-size: 50px 600px;
+	text-decoration: none;
+	color:white;
+}
