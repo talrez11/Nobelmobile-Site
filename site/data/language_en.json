@@ -6,5 +6,7 @@
     "Int":"Int' Move",
     "number":"09-7654321",
     "number_text":"Call us",
-    "callback":"Get a callback"
+    "callback":"Get a callback",
+    "close":"close",
+    "send":"Send form"
 }
