@@ -10,9 +10,9 @@ header {
 	display: block;
 	background-image: url(../images/home-background-04.jpg);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center bottom;
 	background-size: 100% auto;
-	min-height: 352px;
+	min-height: 425px;
 }
 
 div#top {
@@ -50,14 +50,14 @@ div.content {
 	position: relative;
 }
 
-div.controls {
+div.content > div.controls {
 	display: block;
 	position: absolute;
 	left: 0px;
 	top:50px;
 }
 
-div.controls a {
+div.content > div.controls a {
 	display: block;
 	text-align: left;
 	margin-bottom: 10px;
@@ -72,10 +72,18 @@ div.controls a {
 	color: white;
 	cursor: pointer;
 	position: relative;
+	transition:all 0.5s;
 	z-index: 1;
 }
 
-div.controls a:before {
+div.content >div.controls a.active {
+	color:#f39c12;
+	left: 0px;
+}
+
+
+
+div.content > div.controls a:before {
 	content:"";
 	position: absolute;
 	top:50%;
@@ -90,19 +98,35 @@ div.controls a:before {
 	height: 30px;
 }
 
-div.controls a:nth-of-type(2):before {
+div.content > div.controls a:nth-of-type(1):before {
+	background-position:0px -120px;
+}
+
+div.content > div.controls a.active:nth-of-type(1):before{
+	background-position:0px -150px;
+}
+
+div.content > div.controls a:nth-of-type(2):before {
 	background-position:0px -180px;
 }
 
-div.controls a:nth-of-type(3):before {
+div.content > div.controls a.active:nth-of-type(2):before{
+	background-position:0px -210px;
+}
+
+div.content > div.controls a:nth-of-type(3):before {
 	background-position:0px -240px;
 }
 
-div.controls a:after {
+div.content > div.controls a.active:nth-of-type(3):before{
+	background-position:0px -270px;
+}
+
+div.content > div.controls a:after {
 	content: "";
 	position: absolute;
 	top: 0px;
-	left: 50%;
+	left: 45%;
 	width: 65px;
 	height: 65px;
 	background-color: #34495e;
@@ -136,3 +160,146 @@ a.callback {
 	text-decoration: none;
 	color:white;
 }
+
+/*Articles Section */
+
+div.content {
+	display: block;
+}
+
+div.nobel_articles {
+	display: block;
+	margin-left: auto;
+	width: 100%;
+	position: relative;
+
+}
+
+div.testimonial {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: -150%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	opacity: 1;
+	transition:all 0.5s;
+
+}
+
+div.testimonial a {
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	background-image: url(../images/icons-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: left -155px;
+	background-size: 50px 600px;
+    color: #bcc2c6
+
+}
+
+div.testimonial p {
+	display: block;
+	text-align: left;
+	font-size: 0.9em;
+	padding-left: 140px;
+	padding-right: 15px;
+}
+
+div.testimonial p img {
+	width: 100%;
+	height: 100%;
+}
+
+
+/*LightBox Form*/
+
+div.lightbox {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: fixed;
+	top: -100%;
+	left: 8px;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 95%;
+	height: 330px;
+	z-index: 10000;
+	transition:all 0.8s;
+
+}
+
+div.lightbox a {
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	background-image: url(../images/icons-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: left -155px;
+	background-size: 50px 600px;
+    color: #bcc2c6
+}
+
+form {
+	display: block;
+}
+
+form label {
+	display: block;
+	margin-bottom:10px;
+	position: relative;
+}
+
+form label:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 25px;
+	background-image: url(../images/icons-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: left -548px;
+	background-size: 50px 600px;
+	width: 50px;
+	height: 50px;
+}
+
+form label:first-of-type:before {
+	background-position: left -502px;
+}
+
+form label input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 40px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: calc(80% - 40px);
+	font-size: 0.9em;
+}
+
+form div.controls {
+	display: block;
+}
+
+form div.controls button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #f39c12;
+	border:none;
+	color:white;
+	width: 81%;
+}
+
+
