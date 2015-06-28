@@ -49,6 +49,70 @@ Site.is_mobile = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
+
+
+	$('div.controls a:first').on('click',function() {
+		$(this).addClass('active');
+		$('div.controls a:first').next().removeClass('active');
+		$('div.controls a:last').removeClass('active');
+		$('div.testimonial:first').css('left','0%')
+								  .css('opacity','1');
+
+		$('div.testimonial:first').next().css('left','-150%')
+						  				 .css('opacity','0');
+
+		$('div.testimonial:last').css('left','-150%')
+							     .css('opacity','0');
+
+	});
+
+	$('div.controls a:first').next().on('click',function() {
+		$(this).addClass('active');
+		$('div.controls a:first').removeClass('active');
+		$('div.controls a:last').removeClass('active');
+		$('div.testimonial:first').next().css('left','0%')
+								  .css('opacity','1');
+
+		$('div.testimonial:first').css('left','-150%')
+						  				 .css('opacity','0');
+
+		$('div.testimonial:last').css('left','-150%')
+							     .css('opacity','0');
+
+	});
+
+	$('div.controls a:last').on('click',function() {
+		$(this).addClass('active');
+		$('div.controls a:first').removeClass('active');
+		$('div.controls a:first').next().removeClass('active');
+		$('div.testimonial:last').css('left','0%')
+								 .css('opacity','1');
+
+		$('div.testimonial:first').css('left','-150%')
+						  		  .css('opacity','0');
+
+		$('div.testimonial:first').next().css('left','-150%')
+							     		 .css('opacity','0');
+
+	});
+
+	// Function for close button
+	$('a.close').on('click',function(){
+		$('div.testimonial').css('opacity','0')
+							.css('left','-150%');
+		$('div.controls a').removeClass('active');
+	});
+
+	// Function for showing form
+	$('a.callback').on('click',function(){
+		$('div.lightbox').css('top','15%');
+	});
+
+	// Function for closing form
+	$('div.lightbox a').on('click',function(){
+		$('div.lightbox').css('top','-100%');
+	})
+
 };
 
 
