@@ -12,7 +12,7 @@ header {
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: 100% auto;
-	min-height: 425px;
+	min-height: 400px;
 }
 
 div#top {
@@ -215,6 +215,11 @@ div.testimonial p img {
 	height: 100%;
 }
 
+div#btncontainer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
 
 /*LightBox Form*/
 
